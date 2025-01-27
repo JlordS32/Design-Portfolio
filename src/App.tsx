@@ -1,13 +1,11 @@
-import Arrow from "./components/Arrow";
-import Button from "./components/Button";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 const App = () => {
    return (
       <main>
-         <div className="arrow-container">
-            <Arrow direction="left" />
-            <Button />
-         </div>
+         <Navbar />
+         <Hero />
       </main>
    );
 };
