@@ -6,7 +6,7 @@
    --pink: hsl(0, 78%, 79%);
    --light-orange: hsl(28, 89%, 67%);
    --tomato: hsl(7, 77%, 66%);
-   --blue-gren: hsl(177, 100%, 88%);
+   --blue-green: hsl(177, 100%, 88%);
    --violet: hsl(314, 45%, 23%);
    --black: hsl(0, 0%, 1%);
    --grey: hsl(30, 5%, 45%);
@@ -15,7 +15,6 @@
    /* typography */
    --font-family: "Plus Jakarta Sans", serif;
    --font-size: 18px;
-   --line-height: 28px;
    --border-radius: 28px;
 
    /* button */
@@ -26,13 +25,12 @@
 
    font-family: var(--font-family);
    font-size: var(--font-size);
-   line-height: var(--line-height);
 }
 
 * {
    margin: 0;
    padding: 0;
-   outline: 1px red solid;
+   // outline: 1px red solid;
 }
 
 *,
@@ -80,3 +78,25 @@ h3 {
    font-size: 1.77778rem;
    line-height: normal;
 }
+
+p {
+   line-height: 1.75rem;
+}
+
+// SCREEN SIZE 
+// Tablet
+@media (max-width: 1024px) {
+   body {
+       padding-left: 12px;
+       padding-right: 12px;
+   }
+}
+
+// Mobile 
+@media (max-width: 768px) {
+   body {
+       padding-left: 8px;
+       padding-right: 8px;
+   }
+}
+

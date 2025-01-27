@@ -1,9 +1,15 @@
-@mixin center {
+@mixin center($justify: center, $align: center) {
    display: flex;
-   justify-content: center;
-   align-items: center;
+   justify-content: $justify;
+   align-items: $align;
 }
 
-@mixin text-center {
-   text-align: center;
+@mixin text-center($position: center) {
+   text-align: $position;
+}
+
+@mixin debug {
+   * {
+      outline: 1px solid red;
+   }
 }
