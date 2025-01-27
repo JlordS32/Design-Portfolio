@@ -1,10 +1,5 @@
 import styles from "../styles/modules/button.module.scss";
-
-type ButtonType = {
-   buttonType?: "primary" | "secondary";
-   onClick?: () => void;
-   text?: string;
-};
+import { ButtonType } from "../types/modules/Buttons";
 
 const Button = ({
    buttonType = "primary",

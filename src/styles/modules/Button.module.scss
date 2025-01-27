@@ -1,31 +1,32 @@
+@use "../scss/utility" as *;
+
 .btn {
-   display: block;
-   align-content: center;
+   @include center;
+   @include text-center;
+   color: var(--white);
    width: 228px;
    height: 56px;
-   text-align: center;
-   color: var(--white);
-   border-radius: 28px;
+   border-radius: var(--border-radius);
    transition: all 0.3s ease;
-}
 
-.btn:hover {
-   cursor: pointer;
-   transform: scale(1.025);
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.025);
+   }
 }
 
 .primary {
    background-color: var(--black);
-}
 
-.primary:hover {
-   background-color: var(--purple);
+   &:hover {
+      background-color: var(--purple);
+   }
 }
 
 .secondary {
    background-color: var(--tomato);
-}
 
-.secondary:hover {
-   background-color: var(--light-orange);
+   &:hover {
+      background-color: var(--light-orange);
+   }
 }

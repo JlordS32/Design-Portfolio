@@ -1,0 +1,31 @@
+@use "../scss/utility" as *;
+
+.arrow {
+   @include center;
+   width: 64px;
+   height: 64px;
+   text-align: center;
+   border-radius: 100%;
+   transition: all 0.3s ease;
+
+   &[data-direction="right"] {
+      transform: scaleX(-1);
+   }
+
+   &[data-direction="right"]:hover {
+      transform: scaleX(-1) scale(1.1);
+   }
+
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+   }
+}
+
+.primary {
+   background-color: var(--black);
+}
+
+.secondary {
+   background-color: var(--purple);
+}

@@ -16,14 +16,13 @@
   --font-family: "Plus Jakarta Sans", serif;
   --font-size: 18px;
   --line-height: 28px;
+  --border-radius: 28px;
 
   /* button */
   --btn-1-idle: var(--black);
   --btn-1-hover: var(--tomato);
   --btn-2: var(--purple);
   --btn-2-hover: var(--light-orange);
-  --btn-font-size: 0.8125rem;
-  --standard-width: clamp(20.4375rem, 95%, 69.375rem);
 
   font-family: var(--font-family);
   font-size: var(--font-size);
