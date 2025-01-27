@@ -1,7 +1,7 @@
 @use "../scss/utility" as *;
 
 .btn {
-   @include center;
+   @include flex;
    @include text-center;
    color: var(--white);
    width: 14.25rem;

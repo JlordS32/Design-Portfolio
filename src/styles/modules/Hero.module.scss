@@ -1,7 +1,7 @@
 @use "../scss/utility" as *;
 
 section.hero {
-   @include center;
+   @include flex;
    flex-direction: column;
 
    .title {
@@ -20,22 +20,35 @@ section.hero {
 
       p {
          padding: 0 4rem;
+         color: var(--grey);
       }
    }
 
    .graphics {
       display: grid;
-      height: 20rem;
+      height: 22rem;
       width: 100%;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      grid-auto-rows: 10rem;
       gap: 1.5rem;
 
-      > .gridWrapper > div {
-         border-radius: 0.5rem;
-         width: 100%;
-         height: 100%;
-         color: var(--white);
+      .gridWrapper {
+         > div {
+            @include flex(space-between, flex-end);
+            border-radius: 0.5rem;
+            width: 100%;
+            height: 100%;
+            color: var(--white);
+            padding: 1.3rem;
+            font-size: 1.34rem;
+            font-weight: 500;
+            line-height: 1.55rem;
+
+            img {
+               align-self: flex-start;
+            }
+         }
       }
 
       $grid-span-values: (
@@ -62,18 +75,18 @@ section.hero {
          5: (
             2,
             1,
-            var(--tomato)
+            var(--tomato),
          ),
          6: (
             2,
             1,
-            var(--violet)
+            var(--violet),
          ),
       );
 
       // Loop through the map and apply the grid spans dynamically
       @each $i, $span in $grid-span-values {
-         > .gridWrapper:nth-child(#{$i}) {
+         .gridWrapper:nth-child(#{$i}) {
             grid-column: span nth($span, 1);
             grid-row: span nth($span, 2);
 

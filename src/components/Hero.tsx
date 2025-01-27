@@ -15,31 +15,40 @@ const Hero = () => {
             <div className={styles.gridWrapper}>
                <div data-content="Graphic Design">
                   <span>Graphic Design</span>
+                  <img src="/images/graphic-design.svg" alt="Graphic Design" />
                </div>
             </div>
             <div className={styles.gridWrapper}>
                <div data-content="UI/UX">
                   <span>UI/UX</span>
+                  <img src="/images/ui-ux.svg" alt="UI/UX" />
                </div>
             </div>
             <div className={styles.gridWrapper}>
                <div data-content="Apps">
                   <span>Apps</span>
+                  <img src="/images/apps.svg" alt="Apps" />
                </div>
             </div>
             <div className={styles.gridWrapper}>
                <div data-content="Photography">
                   <span>Photography</span>
+                  <img src="/images/photography.svg" alt="Photography" />
                </div>
             </div>
             <div className={styles.gridWrapper}>
                <div data-content="Illustrations">
                   <span>Illustrations</span>
+                  <img src="/images/illustrations.svg" alt="Illustrations" />
                </div>
             </div>
             <div className={styles.gridWrapper}>
                <div data-content="Motion graphics">
                   <span>Motion graphics</span>
+                  <img
+                     src="/images/motion-graphics.svg"
+                     alt="Motion Graphics Image"
+                  />
                </div>
             </div>
          </div>

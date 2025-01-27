@@ -1,7 +1,7 @@
 @use "../scss/utility" as *;
 
 .arrow {
-   @include center;
+   @include flex;
    width: 3.55rem;
    height: 3.55rem;
    text-align: center;

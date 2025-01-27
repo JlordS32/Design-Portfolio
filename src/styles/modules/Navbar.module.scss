@@ -6,7 +6,7 @@ nav {
 }
 
 .wrapper {
-   @include center(space-between);
+   @include flex(space-between);
    width: 100%;
    margin-top: 2.5rem;
    margin-bottom: 4rem;
