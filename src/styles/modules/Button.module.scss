@@ -3,7 +3,6 @@
    align-content: center;
    width: 228px;
    height: 56px;
-   background-color: var(--black);
    text-align: center;
    color: var(--white);
    border-radius: 28px;
@@ -11,11 +10,22 @@
 }
 
 .btn:hover {
-   background-color: var(--purple);
    cursor: pointer;
    transform: scale(1.025);
 }
 
-.btn2:hov {
-   background-color: var(--tomato) !important;
+.primary {
+   background-color: var(--black);
+}
+
+.primary:hover {
+   background-color: var(--purple);
+}
+
+.secondary {
+   background-color: var(--tomato);
+}
+
+.secondary:hover {
+   background-color: var(--light-orange);
 }

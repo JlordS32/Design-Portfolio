@@ -1,14 +1,23 @@
-import styles from "../css/button.module.scss";
+import styles from "../styles/modules/button.module.scss";
 
 type ButtonType = {
    buttonType?: "primary" | "secondary";
    onClick?: () => void;
+   text?: string;
 };
 
-const Button = ({ buttonType, onClick }: ButtonType) => {
+const Button = ({
+   buttonType = "primary",
+   onClick = () => {alert("Button is clicked")},
+   text = "Button",
+}: ButtonType) => {
    return (
-      <div className={styles.btn} onClick={onClick}>
-         <span>Button</span>
+      <div
+         className={`${styles.btn} 
+            ${styles[buttonType]}`}
+         onClick={onClick}
+      >
+         <span>{text}</span>
       </div>
    );
 };
