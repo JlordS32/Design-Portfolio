@@ -1,23 +1,17 @@
 import styles from "../styles/modules/arrow.module.scss";
 import { ArrowType } from "../types/modules/Buttons";
 
-const Arrow = ({
-   direction = "left",
-   buttonType = "primary",
-   onClick = () => {
-      alert("Button is clicked");
-   },
-}: ArrowType) => {
+const Arrow = ({ direction = "left", onClick = () => {} }: ArrowType) => {
    const imageSrc = "/arrow.svg";
 
    return (
-      <div
-         className={`${styles.arrow} ${styles[buttonType]}`}
+      <button
+         className={`${styles.arrow}`}
          onClick={onClick}
          data-direction={`${direction}`}
       >
          <img src={imageSrc} alt="allow left" />
-      </div>
+      </button>
    );
 };
 

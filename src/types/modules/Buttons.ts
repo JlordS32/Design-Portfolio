@@ -5,7 +5,6 @@ export type ButtonType = {
 };
 
 export type ArrowType = {
-   buttonType?: "primary" | "secondary";
    direction?: "left" | "right";
    onClick?: () => void;
 }; 

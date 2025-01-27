@@ -3,17 +3,17 @@ import { ButtonType } from "../types/modules/Buttons";
 
 const Button = ({
    buttonType = "primary",
-   onClick = () => {alert("Button is clicked")},
+   onClick = () => {},
    text = "Button",
 }: ButtonType) => {
    return (
-      <div
+      <button
          className={`${styles.btn} 
             ${styles[buttonType]}`}
          onClick={onClick}
       >
          <span>{text}</span>
-      </div>
+      </button>
    );
 };
 
