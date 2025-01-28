@@ -3,96 +3,95 @@
 section.hero {
    @include flex;
    flex-direction: column;
+   margin-top: 4rem;
+}
 
-   .title {
+.title {
+   width: 100%;
+   max-width: 47rem;
+   margin-bottom: 4.45rem;
+
+   h1,
+   p {
+      @include text-center;
+   }
+
+   h1 {
+      margin-bottom: 1.3rem;
+   }
+
+   p {
+      padding: 0 4rem;
+      color: var(--grey);
+   }
+}
+
+.graphics {
+   display: grid;
+   height: 22rem;
+   width: 100%;
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-auto-rows: 10rem;
+   gap: 1.5rem;
+
+   .gridWrapper > div {
+      @include flex(space-between, flex-end);
+      border-radius: 0.5rem;
       width: 100%;
-      max-width: 47rem;
-      margin-bottom: 5rem;
+      height: 100%;
+      color: var(--white);
+      padding: 1.3rem;
+      font-size: 1.34rem;
+      font-weight: 500;
+      line-height: 1.55rem;
 
-      h1,
-      p {
-         @include text-center;
-      }
-
-      h1 {
-         margin-bottom: 1.3rem;
-      }
-
-      p {
-         padding: 0 4rem;
-         color: var(--grey);
+      img {
+         align-self: flex-start;
       }
    }
 
-   .graphics {
-      display: grid;
-      height: 22rem;
-      width: 100%;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-auto-rows: 10rem;
-      gap: 1.5rem;
+   $grid-span-values: (
+      1: (
+         2,
+         2,
+         var(--purple),
+      ),
+      2: (
+         1,
+         1,
+         var(--light-orange),
+      ),
+      3: (
+         1,
+         1,
+         var(--pink),
+      ),
+      4: (
+         2,
+         1,
+         var(--blue-green),
+      ),
+      5: (
+         2,
+         1,
+         var(--tomato),
+      ),
+      6: (
+         2,
+         1,
+         var(--violet),
+      ),
+   );
 
-      .gridWrapper {
+   // Loop through the map and apply the grid spans dynamically
+   @each $i, $span in $grid-span-values {
+      .gridWrapper:nth-child(#{$i}) {
+         grid-column: span nth($span, 1);
+         grid-row: span nth($span, 2);
+
          > div {
-            @include flex(space-between, flex-end);
-            border-radius: 0.5rem;
-            width: 100%;
-            height: 100%;
-            color: var(--white);
-            padding: 1.3rem;
-            font-size: 1.34rem;
-            font-weight: 500;
-            line-height: 1.55rem;
-
-            img {
-               align-self: flex-start;
-            }
-         }
-      }
-
-      $grid-span-values: (
-         1: (
-            2,
-            2,
-            var(--purple),
-         ),
-         2: (
-            1,
-            1,
-            var(--light-orange),
-         ),
-         3: (
-            1,
-            1,
-            var(--pink),
-         ),
-         4: (
-            2,
-            1,
-            var(--blue-green),
-         ),
-         5: (
-            2,
-            1,
-            var(--tomato),
-         ),
-         6: (
-            2,
-            1,
-            var(--violet),
-         ),
-      );
-
-      // Loop through the map and apply the grid spans dynamically
-      @each $i, $span in $grid-span-values {
-         .gridWrapper:nth-child(#{$i}) {
-            grid-column: span nth($span, 1);
-            grid-row: span nth($span, 2);
-
-            > div {
-               background-color: nth($span, 3);
-            }
+            background-color: nth($span, 3);
          }
       }
    }
