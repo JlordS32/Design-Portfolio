@@ -1,0 +1,27 @@
+@use "../scss/utility" as *;
+
+section.contact {
+   @include flex;
+   background-color: var(--black);
+   border-radius: 0.55556rem;
+   color: var(--white);
+   margin-top: 4.9rem;
+   margin-bottom: 3.15rem;
+   padding: 4.5rem;
+   gap: 10.11rem;
+}
+
+.booking {
+
+   h2 {
+      padding: 1.5rem 0;
+   }
+
+   p {
+      text-wrap: pretty;
+   }
+}
+
+.clickToAction {
+   @include flex;
+}
