@@ -1,5 +1,5 @@
 import styles from "../styles/modules/button.module.scss";
-import { ButtonType } from "../types/modules/Buttons";
+import { ButtonType } from "../types/Buttons";
 
 const Button = ({
    buttonType = "primary",

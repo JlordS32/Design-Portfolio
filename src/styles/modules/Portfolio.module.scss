@@ -1,0 +1,9 @@
+@use "../scss/utility" as *;
+
+section.portfolio {
+   @include flex(center, center, column);
+   flex-direction: column;
+   gap: 3rem;
+   margin-top: 5rem;
+   width: 100%;
+}

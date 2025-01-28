@@ -1,5 +1,5 @@
 import styles from "../styles/modules/arrow.module.scss";
-import { ArrowType } from "../types/modules/Buttons";
+import { ArrowType } from "../types/Buttons";
 
 const Arrow = ({ direction = "left", onClick = () => {} }: ArrowType) => {
    const imageSrc = "/arrow.svg";

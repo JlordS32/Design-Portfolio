@@ -1,0 +1,22 @@
+@use "../scss/utility" as *;
+
+.arrows {
+   display: flex;
+   gap: 1.5rem;
+}
+
+.container {
+   width: 100%;
+   position: relative;
+}
+
+.slider {
+   gap: 1.7rem;
+   display: flex;
+   right: 10rem;
+   overflow: hidden;
+
+   img {
+      transition: all 0.3s ease;
+   }
+}
