@@ -8,22 +8,17 @@ const ImageSlider = ({ images }: ImageSliderType) => {
 
    const showNextImage = () => {
       setImageIndex((index) => {
-         if (index === images.length - 1) return 0;
-         images.push(images[index]);
+         if (index === images.length - 2) return 0;
          return index + 1;
       });
    };
 
    const showPreviousImage = () => {
       setImageIndex((index) => {
-         if (index === 0) return images.length - 1;
+         if (index === 0) return images.length - 2;
          return index - 1;
       });
    };
-   
-   useEffect(() => {
-      console.log(imageIndex);
-   }, [imageIndex]);
 
    return (
       <>
@@ -36,7 +31,7 @@ const ImageSlider = ({ images }: ImageSliderType) => {
                         key={index}
                         alt={`Slider Image ${index + 1}`}
                         style={{
-                           translate: `${0.5 + imageIndex * -100}%`,
+                           translate: `${imageIndex * -100}%`,
                         }}
                      />
                   );

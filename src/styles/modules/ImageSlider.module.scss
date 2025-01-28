@@ -6,17 +6,18 @@
 }
 
 .container {
+   @include flex;
    width: 100%;
    position: relative;
 }
 
 .slider {
-   gap: 1.7rem;
    display: flex;
    right: 10rem;
    overflow: hidden;
 
    img {
-      transition: all 0.3s ease;
+      transition: translate 0.3s ease;
+      padding: 1.6rem;
    }
 }
