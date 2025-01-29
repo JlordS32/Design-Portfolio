@@ -1,4 +1,4 @@
-import styles from "../styles/modules/arrow.module.scss";
+import styles from "../styles/modules/Arrow.module.scss";
 import { ArrowType } from "../types/Buttons";
 
 const Arrow = ({ direction = "left", onClick = () => {} }: ArrowType) => {

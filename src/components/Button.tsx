@@ -1,4 +1,4 @@
-import styles from "../styles/modules/button.module.scss";
+import styles from "../styles/modules/Button.module.scss";
 import { ButtonType } from "../types/Buttons";
 
 const Button = ({
