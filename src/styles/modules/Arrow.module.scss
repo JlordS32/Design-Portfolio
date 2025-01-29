@@ -13,13 +13,11 @@
    }
 
    &[data-direction="right"]:hover {
-      transform: scaleX(-1) scale(1.05);
       background-color: var(--purple);
    }
 
    &:hover {
       cursor: pointer;
-      transform: scale(1.05);
       background-color: var(--purple);
    }
 

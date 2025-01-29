@@ -3,6 +3,7 @@
 section.portfolio {
    @include flex(center, center, column);
    flex-direction: column;
+   padding: 0 !important;
    gap: 3rem;
    margin-top: 5rem;
    width: 100%;

@@ -1,5 +1,18 @@
 .main {
-   width: clamp(768px, 100%, 1200px);
+   width: clamp(375px, 100%, 1200px);
    margin: 0 auto;
-   padding-bottom:  4.5rem;
+   padding-bottom:  3.5rem;
+
+   @media screen and (max-width: 900px) {
+      padding-bottom:  3rem;
+   }
+
+   @media screen and (max-width: 500px) {
+      padding: 0.9rem;
+      padding-bottom:  1.9rem;
+   }
+
+   nav, section {
+      padding: 0 2.15rem;
+   }
 }

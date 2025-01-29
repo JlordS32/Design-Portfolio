@@ -1,17 +1,18 @@
 @use "../scss/utility" as *;
 
-section.contact {
+.container {
    @include flex;
    background-color: var(--black);
    border-radius: 0.55556rem;
    color: var(--white);
    margin-top: 4.9rem;
    margin-bottom: 3.15rem;
-   padding: 4.5rem;
-   gap: 10.11rem;
+   padding: 4.5rem 3.16rem !important;
 }
 
 .booking {
+   flex: 1;
+   margin-right: 7rem;
 
    h2 {
       padding: 1.5rem 0;
@@ -22,6 +23,20 @@ section.contact {
    }
 }
 
-.clickToAction {
-   @include flex;
+@media screen and (max-width: 900px) {
+   .container {
+      flex-direction: column;
+      padding: 3.15rem;
+      padding: 4rem 3rem !important;
+      gap: 1.45rem;
+   }
+   
+   .booking {
+      margin-right: 0;
+
+      h2, p {
+         @include text-center;
+         text-wrap: wrap;
+      }
+   }
 }

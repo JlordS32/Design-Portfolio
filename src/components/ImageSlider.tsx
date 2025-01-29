@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/modules/ImageSlider.module.scss";
 import Arrow from "./Arrow";
 import { ImageSliderType } from "../types/ImageSlider";
@@ -8,14 +8,14 @@ const ImageSlider = ({ images }: ImageSliderType) => {
 
    const showNextImage = () => {
       setImageIndex((index) => {
-         if (index === images.length - 2) return 0;
+         if (index === images.length - 1) return 0;
          return index + 1;
       });
    };
 
    const showPreviousImage = () => {
       setImageIndex((index) => {
-         if (index === 0) return images.length - 2;
+         if (index === 0) return images.length - 1;
          return index - 1;
       });
    };
