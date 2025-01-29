@@ -4,8 +4,8 @@
    @include flex;
    @include text-center;
    color: var(--white);
-   width: 14.25rem;
-   height: 3.5rem;
+   width: clamp(9.7rem, 20vw, 12.66rem);
+   height: clamp(2.4rem, 10vw, 3.5rem);
    border-radius: 1.6rem;
    transition: all 0.3s ease;
    font-size: 0.89rem;

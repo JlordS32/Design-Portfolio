@@ -1,7 +1,7 @@
 @use "../scss/utility" as *;
 
 section.about {
-   margin-top: 8rem;
+   margin-top: clamp(5.5rem, 5vw, 8rem);
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    width: 100%;
@@ -83,10 +83,6 @@ section.about {
 }
 
 @media screen and (max-width: 900px) {
-   section.about {
-      margin-top: 6.6rem;
-   }
-
    .wrapper {
       gap: 1.3rem;
    }
@@ -100,13 +96,29 @@ section.about {
 }
 
 @media screen and (max-width: 600px) {
+   .imgWrapper {
+      @include flex;
+   }
+
    .imgWrapper > div {
-      width: 20rem;
       position: relative;
       right: 0%;
+      transform: scale(0.9);
    }
-   
+
    section.about {
       grid-template-columns: repeat(1, 1fr);
+      gap: 2.22rem;
+   }
+
+   .wrapper {
+      gap: 1.33rem;
+      justify-content: center;
+      align-items: center;
+
+      p,
+      h2 {
+         @include text-center;
+      }
    }
 }

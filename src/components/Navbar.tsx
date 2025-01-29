@@ -3,7 +3,7 @@ import styles from "../styles/modules/Navbar.module.scss";
 
 const Navbar = () => {
    return (
-      <nav className={`${styles.navbar}`}>
+      <nav>
          <div className={styles.wrapper}>
             <img src="logo.svg" alt="logo" />
 

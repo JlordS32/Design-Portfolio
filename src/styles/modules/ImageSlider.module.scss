@@ -19,5 +19,12 @@
    img {
       transition: translate 0.3s ease;
       padding: 0 0.8rem;
+      border-radius: 20px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .slider > img {
+      width: 20rem;
    }
 }
