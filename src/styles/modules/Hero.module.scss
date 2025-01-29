@@ -1,5 +1,7 @@
 @use "../scss/utility" as *;
 @use "sass:math";
+@use "sass:list";
+
 
 section.hero {
    @include flex;
@@ -101,11 +103,11 @@ section.hero {
    // Loop through the map and apply the grid spans dynamically
    @each $i, $span in $grid-span-values {
       .gridWrapper:nth-child(#{$i}) {
-         grid-column: span nth($span, 1);
-         grid-row: span nth($span, 2);
+         grid-column: span list.nth($span, 1);
+         grid-row: span list.nth($span, 2);
 
          > div {
-            background-color: nth($span, 3);
+            background-color: list.nth($span, 3);
          }
       }
    }
